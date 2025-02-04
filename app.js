@@ -14,4 +14,8 @@ header.addEventListener("mouseover", function () {
   function removeElementOnce() {
     hero.lastElementChild.remove();
     document.addEventListener('click', removeElementOnce);
+    function removeElementOnce() {
+        hero.lastElementChild.remove();
+        document.removeEventListener('click', removeElementOnce);
+    }
 }
