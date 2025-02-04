@@ -7,3 +7,4 @@ header.addEventListener("mouseover", function () {
   header.addEventListener("mouseout", function () {
     header.textContent = originalText;
   });
+  document.body.addEventListener("keypress",function(){console.log('removing first child');document.getElementById("contain-all").firstElementChild.remove();})
