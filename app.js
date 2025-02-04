@@ -19,3 +19,6 @@ header.addEventListener("mouseover", function () {
         document.removeEventListener('click', removeElementOnce);
     }
 }
+document.addEventListener('click', function (event) {
+    console.log(event);
+});
