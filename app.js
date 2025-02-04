@@ -22,3 +22,24 @@ header.addEventListener("mouseover", function () {
 document.addEventListener('click', function (event) {
     console.log(event);
 });
+
+const myCustomDiv = document.createElement('div');
+
+for (let i = 1; i <= 200; i++) {
+    // create a new paragraph element
+    const newElement = document.createElement('p');
+  
+    // add text to the paragraph 
+    newElement.textContent = 'This is paragraph number ' + i;
+
+    // register an event listener to the paragraph element
+    newElement.addEventListener('click', function respondToTheClick(evt) {
+        console.log('A paragraph was clicked.');
+    });
+
+    // append the paragraph to the new div element 
+    myCustomDiv.appendChild(newElement);
+}
+
+// append the new div element to the page
+document.body.appendChild(myCustomDiv);
